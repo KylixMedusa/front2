@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TestBackground</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body,html{
+                width:100vw;
+                margin: 0;
+                background-color: white;
+            }
+            .container1{
+                position: absolute;
+                width:100vw;
+                height: 100vh;
+                background-image: url("Background0.png");
+                background-repeat: no-repeat;
+                background-size: 100vw 100vh;
+                background-position: center center;
+                z-index:1;
+
+            }
+            .container2{
+                position: absolute;
+                    width:100vw;
+                    height:100vh;
+                    bottom:0;
+                    left:0;
+                    background-image: url("Background1.png");
+                    background-size: 100vw 100vh;
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    z-index:2;
+            }
+            @media only screen and (min-height: 700px){
+                .container2{
+                    background-size: 100vw 80vh;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container1"></div>
+        <div class="container2"></div>
+    </body>
